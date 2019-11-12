@@ -80,7 +80,7 @@ bool isSorted(T* init, T* end)
 {
 	if (init == end) return true;
 	
-	for (auto p = init, pp = ++p; pp != end; ++p, ++pp)
+	for (auto p = init, pp = p+1; pp != end; ++pp, ++p)
 		if (*p > *pp)
 			return false;
 
